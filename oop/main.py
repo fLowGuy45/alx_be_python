@@ -1,7 +1,8 @@
-from library_system import Book, EBook, PrintBook, Library
-from book_class import Book as BasicBook  # Renamed to avoid conflict with Book in library_system
+# main.py
 
-def demo_library_system():
+from library_system import Book, EBook, PrintBook, Library
+
+def main():
     # Create a Library instance
     my_library = Library()
 
@@ -18,18 +19,5 @@ def demo_library_system():
     # List all books in the library
     my_library.list_books()
 
-
-def demo_magic_methods():
-    # Demonstrating __str__, __repr__, and __del__
-    my_book = BasicBook("1984", "George Orwell", 1949)
-    print(my_book)           # Uses __str__
-    print(repr(my_book))     # Uses __repr__
-    del my_book              # Triggers __del__
-
-
 if __name__ == "__main__":
-    print("=== Library System Demo ===")
-    demo_library_system()
-
-    print("\n=== Magic Methods Demo ===")
-    demo_magic_methods()
+    main()
